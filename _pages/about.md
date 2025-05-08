@@ -1,49 +1,64 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+I am a PhD candidate in the Department of Psychology at UC Berkeley, supervised by Rich Ivry. I am broadly interested in the flexibility of human learning. I build cognitive and neural models to understand how the brain supports multiple learning processes and how these systems interact to enable adaptive behavior. My early PhD work focused on how the sensorimotor system operates under uncertainty from various sources to support efficient adaptation. I am now extending this work to investigate how we plan movements and make decisions when interacting with other agents under uncertainty. I am also interested in the function of the cerebellum, a brain region historically associated with motor control and learning. I develop models to explore the role of the cerebellum in broader cognitive domains such as timing, intuitive physics, and theory of mind. Here you can find the summary of my current projects.
 
-A data-driven personal website
+
+Project 1: How the brain adapts to the uncertainties in the environment
 ======
-Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+Our motor system needs to due with an enormous amount of noise and uncertainties. For example, our visual and proprioceptive inputs are imperfect, and the internal state of the body and the external environment are changing all the time. It is impressive that the motor system can perform accurate movements and generalize skills regardless of those uncertainties, while it is a big challenge for the robotic system to maintain a stable performance in noisy environments. 
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over - just be sure to save the markdown files! Finally, you can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+We examine how the motor system adapts to the uncertainties in two different systems, the implicit recalibration system and the action selection system. The recalibration system corrects for small errors in an automatic way and [does not require attentional resource](https://pubmed.ncbi.nlm.nih.gov/39282258/), while the action selection system is more flexible and can adjust behavior to meet specific task demands. 
 
-Getting started
+<img src="/images/cpc.png" alt="Description" align="left" width="500"> 
+
+Our recent work suggests that implicit recalibration is [insensitive to noise of the states](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011951). However, this system showed some unique effects due to the uncertainty in the context. For example, learning is faster but lasts shorter when the environment is more volatile; reversal learning is slower than the original learning; relearning is slower rather than faster when being re-exposed to the same perturbation for the second time. We proposed a [Cerebellar Population Coding model](https://pubmed.ncbi.nlm.nih.gov/37461557/) which provides a unified explanation to the contextual effects in implicit recalibration without referring to any contextual inference process. This model is composed of a simple two-layer network corresponding to the cerebellar cortex and deep cerebellar nuclei, respectively, and the contextual effects are emergent phenomena from the population activation within the model. 
+
+We examine how the action selection system responds to uncertainty with a novel air-hockey game, which requires motor control in multiple dimensions while compensating for the wind that changes across time. The action selection showed a close optimal modulation where noise and vitality of the state have opposite effects on the learning rate. Interestingly, participants perform significantly worse in incorporating the uncertainty when playing a non-motor version of the game.
+
+Besides the uncertainties in the physical world, another key source of uncertainty is from the other agents. Incorporating this front of uncertainties requires the ability of theory of mind (ToM). However, knowing others' minds is HARD. My current studies focus on understanding how we make decisions with the uncertainties of others' intentions.
+
+ 
+Project 2: Target-specific and context-dependent biases in movement reveal fundamental computations underlying motor control
 ======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this template](https://github.com/academicpages/academicpages.github.io) by clicking the "Use this template" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+Biases in movement offer a window to probe the underlying control mechanisms in motor control. Here we focus on biases at three time scales: 1. stable target-specific bias; 2. bias induced by a prior distribution; 3. bias induced by the last movement. We provide novel models to explain biases at all three levels.
 
-Site-wide configuration
-------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+<img src="/images/bias.png" alt="Description" align="left" width="600"> 
 
-Create content & metadata
-------
-For site content, there is one markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
+From the [target-specific bias](https://elifesciences.org/reviewed-preprints/100715), we showed that its pattern largely reflects [a mismatch](https://www.nature.com/articles/s41598-020-76220-0) between the proprioceptive space that encodes the hand position and the visual space. Modeling results suggest that participants perceived the target in the visual space and transferred it into a proprioceptive space, and they encoded the motor plan. 
 
-**Markdown generator**
+Prior distribution can also induce a central tendency in the reaching. However, contradict to the prevailing belief, we found this bias to be largely non-Bayesian. In particular, while the motor bias is modulated by the specific prior distribution, the motor variance does not. Current work is focusing on understanding the nature of this bias.
 
-The repository includes [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual markdown files that will be properly formatted for the Academic Pages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the markdown files, then commit and push them to the GitHub repository.
+<img src="/images/bias2.png" alt="Description" align="right" width="500"> 
+We have also identified a novel [trial-by-trial bias](https://pubmed.ncbi.nlm.nih.gov/39416082/) in reaching, where the current movement is biased away from the previous movement. This bias pattern and how it is modulated across various situations suggest an efficient coding mechanism for motor planning. We are now examining how the interaction between the trial-by-trial repulsive bias and prior-induced central tendency reveals how the motor system adapts to the statistical properties of the motor goals. 
 
-How to edit your site's GitHub repository
-------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
 
-Example: editing a markdown file for a talk
-![Editing a markdown file for a talk](/images/editing-talk.png)
+Project 3: How we learn new motor skills
+======
+The primary distinction in motor learning is the difference between an adaptation process, which modulates a well-trained behavior to compensate for small perturbations, and a de novo skill learning process, which creates a new action-outcome map from scratch. Most of the current research on motor learning focuses on the simple adaptation process, with the skill learning process largely unknown. In particular, while numerous computational models of different levels have been proposed to quantitatively predict the adaptation process, few models have been developed for skill learning.  
 
-For more info
-------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+One of my key research interests is to understand the computational mechanism in motor skill learning. To begin with, we examined a long-standing paradox in the motor learning literature: Patients with retrograde amnesia (e.g., [HM](https://en.wikipedia.org/wiki/Henry_Molaison)) showed no impairment in learning the mirror-reversal, however, recent studies consistently showed that [implicit system is supringly rigid](https://journals.physiology.org/doi/pdf/10.1152/jn.00304.2021) and continuous operates improperly even after a week of training. In our recent study, we addressed this question by training participants for a month with different novel sensory motor maps. We illustrate a series of results that contradict the common beliefs of the field: 1. Implicit adaptation can be flipped to match the new sensory motor maps. 2. There is almost no interference between the adaptation in the new and old maps. 3. Center-out reaching task is sufficient to generate this change, while the more "skill-like" task (such as the continuous tracing task) is less efficient. 4. We observed similar changes in implicit adaptation for the mirror-reversal and the rotation task, while the latter is usually considered as a more "adaptation-like" task.
+
+We are building neural network models to explain the different roles of the motor cortex and cerebellum in those tasks.
+
+Project 4: Unique properties of the implicit recalibration system for sensorimotor adaptation
+======
+
+<img src="/images/feedbacktiming.png" alt="Description" align="left" width="400"> 
+
+The implicit recalibration system showed a unique set of features that is unlike any other learning system. For example, our [recent work](https://pubmed.ncbi.nlm.nih.gov/39282258/) showed that implicit recalibration does not tax attentional resources at all. Whether participants paid attention to the motor task or the feedback, or null, had no influence on the learning rate. This suggests the surprisingly robustness of the system. Moreover, the learning of this system does not require the execution of the movement. We showed that learning is maximized when the visual feedback is [temporally aligned with the motor planning](https://www.sciencedirect.com/science/article/pii/S0960982224001398) rather than the hand movement. Our current work focuses on building computational models to understand the driving force of the implicit recalibration. In particular, we aim to test whether and how multisensory integration is involved in implicit recalibration.
+
+
+Project 5: The role of the cerebellum in cognition
+======
+While the cerebellum has been historically regarded as a motor region, emerging research using patients and animal models has suggested the role of the cerebellum in mutiple cognitive domains such as reward-based learning and language. However, how the cerebellum supports those cognitive functions is poorly known at this stage. I applied neurophysiology studies on cerebellar ataxia patients and healthy controls to understand its function in [timing](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011116), intuitive physics, and theory of mind. 
+
+
+
+
+
